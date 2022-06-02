@@ -57,7 +57,7 @@ void user_main(void)
 		boardConfig.adcValAtAngleMin = 0;
 		boardConfig.adcValAtAngleMax = 4096;
 		boardConfig.mechanicalAngleMin = 0;
-		boardConfig.mechanicalAngleMax = 180;
+		boardConfig.mechanicalAngleMax = 225;
 		boardConfig.dceKp = 10;
 		boardConfig.dceKv = 0;
 		boardConfig.dceKi = 0;
