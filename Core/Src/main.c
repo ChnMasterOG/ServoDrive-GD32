@@ -58,10 +58,10 @@ void user_main(void)
 		boardConfig.adcValAtAngleMax = 4096;
 		boardConfig.mechanicalAngleMin = 0;
 		boardConfig.mechanicalAngleMax = 225;
-		boardConfig.dceKp = 10;
-		boardConfig.dceKv = 0;
-		boardConfig.dceKi = 0;
-		boardConfig.dceKd = 50;
+		boardConfig.dceKp = 30;
+		boardConfig.dceKv = 0.5;
+		boardConfig.dceKi = 0.1;
+		boardConfig.dceKd = 150;
 		boardConfig.enableMotorOnBoot = 1;
 		fmc_write(0, &boardConfig, BoardConfig_SIZE);
 	}
