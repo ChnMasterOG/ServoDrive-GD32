@@ -1,4 +1,3 @@
-#include "stdio.h"
 #include "ch32v10x.h"
 
 //------------- I2C1 GPIO 配置 -------------
