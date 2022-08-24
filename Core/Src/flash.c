@@ -7,7 +7,7 @@ uint8_t fmc_write(int _offset, void* _p, uint32_t size)
 	
 	uint32_t EraseCounter = 0x00;
 	uint32_t NbrOfPage = 0x00;
-	uint32_t Address = FLASH_START_ADDR;
+	uint32_t Address = FLASH_START_ADDR + _offset;
 	fmc_state_enum FLASHStatus = FMC_READY;
 	if (size % 4 == 0)
 	{
@@ -34,8 +34,9 @@ void fmc_read(int _offset, void* _p, uint32_t size)
 {
 	uint32_t* p32 = _p;
 	uint32_t Address;
+	uint32_t Start_Address = FLASH_START_ADDR + _offset;
 	
-	for (Address = FLASH_START_ADDR; Address < FLASH_START_ADDR + size; Address += 4)
+	for (Address = Start_Address; Address < Start_Address + size; Address += 4)
 	{
 		*p32++ = REG32(Address);
 	}
